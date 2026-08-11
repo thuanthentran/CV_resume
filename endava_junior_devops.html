@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @page {
+      size: A4;
+      margin: 9mm 15mm 8mm 15mm;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #1a1a1a;
+      font-size: 9pt;
+      line-height: 1.15;
+    }
+
+    .name {
+      text-align: center;
+      font-size: 24.2pt;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 1px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 12.1pt;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 9.1pt;
+      margin-bottom: 2px;
+    }
+
+    .contact a {
+      color: #1a1a1a;
+      text-decoration: underline;
+    }
+
+    hr.top {
+      border: none;
+      border-top: 2px solid #1a1a1a;
+      margin: 3px 0 4px 0;
+    }
+
+    h2.section {
+      font-size: 10.5pt;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      border-bottom: 1.4px solid #1a1a1a;
+      padding-bottom: 1px;
+      margin: 3px 0 1px 0;
+      text-transform: uppercase;
+    }
+
+    h2.section.first {
+      margin-top: 0;
+    }
+
+    p.summary {
+      margin: 0;
+      text-align: justify;
+    }
+
+    /* two columns using inline-block (avoids float-in-table-cell bugs) */
+    .cols {
+      width: 100%;
+    }
+
+    .col-left {
+      display: inline-block;
+      width: 57%;
+      padding-right: 16px;
+      vertical-align: top;
+    }
+
+    .col-right {
+      display: inline-block;
+      width: 41%;
+      vertical-align: top;
+    }
+
+    .cols-50 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cols-50>div {
+      width: 49%;
+    }
+
+    .row-line {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 2px;
+    }
+
+    .row-line:first-child {
+      margin-top: 0;
+    }
+
+    .row-line .rl-label {
+      font-weight: 700;
+      font-size: 9.8pt;
+      flex: 1 1 auto;
+      min-width: 0;
+      padding-right: 8px;
+    }
+
+    .row-line .rl-date {
+      font-size: 9.3pt;
+      font-weight: 700;
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+
+    .row-line.sub .rl-label {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 9.1pt;
+    }
+
+    .row-line.sub .rl-date {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 9.1pt;
+    }
+
+    .entry-meta {
+      font-size: 8.9pt;
+      margin-top: 1px;
+      clear: both;
+    }
+
+    ul {
+      margin: 1px 0 0 0;
+      padding-left: 13px;
+      clear: both;
+    }
+
+    li {
+      margin-bottom: 0px;
+    }
+
+    .skill-block {
+      margin-bottom: 1px;
+    }
+
+    .skill-title {
+      font-weight: 700;
+      font-size: 9.5pt;
+      display: inline;
+      margin-right: 4px;
+    }
+
+    .skill-body {
+      font-size: 9pt;
+      display: inline;
+    }
+
+    .cert-sub {
+      font-size: 8.9pt;
+      font-style: italic;
+      clear: both;
+    }
+
+    .cert-note {
+      font-size: 8.5pt;
+      color: #333;
+      clear: both;
+    }
+
+    .proj-block {
+      margin-top: 3px;
+    }
+
+    .proj-block:first-of-type {
+      margin-top: 0;
+    }
+
+    .proj-title-row .rl-label {
+      font-size: 9.9pt;
+    }
+
+    .proj-sub {
+      font-style: italic;
+      font-size: 9pt;
+      margin: 1px 0 0 0;
+      clear: both;
+    }
+
+    .additional-row {
+      margin-top: 2px;
+    }
+
+    .additional-row .rl-label {
+      font-weight: 700;
+      font-size: 9.5pt;
+    }
+
+    .additional-row .rl-date {
+      font-weight: 700;
+      font-size: 9.5pt;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="name">THUAN THEN TRAN</div>
+  <div class="title">Junior DevOps Engineer</div>
+  <div class="contact">
+    HCM City &bull; 0907251830 &bull; thuanthentran@gmail.com &bull;
+    <a href="https://www.linkedin.com/in/thu%E1%BA%ADn-th%E1%BA%BFn-tr%E1%BA%A7n-33b640190/">LinkedIn</a> &bull; <a
+      href="https://github.com/thuanthentran">GitHub</a> &bull; <a
+      href="https://thuanthentran.github.io/portfolio/">Portfolio</a>
+  </div>
+  <hr class="top">
+
+  <h2 class="section first">Professional Summary</h2>
+  <p class="summary">Final-year IT student (GPA: 8.77/10) with solid Linux fundamentals (files, permissions, processes,
+    services, and command-line troubleshooting), basic networking knowledge (TCP/IP, DNS, ports, connectivity checks),
+    and hands-on cloud-native experience (Docker, Kubernetes, Helm). Comfortable writing Bash/Python automation scripts,
+    working with Git version control, and supporting CI/CD pipelines (Jenkins, GitHub Actions) and GitOps workflows
+    (ArgoCD, Ansible). Highly proactive with strong English communication (TOEIC LR 905 & SW 330), eager to build
+    capability through knowledge-transfer sessions, shadowing experienced engineers, and guided hands-on assignments.
+    Seeking a Fresher DevOps Engineer role to support platform operations, triage and troubleshoot issues, and grow into
+    complex telecom / test-orchestration environments.</p>
+
+  <div class="cols">
+    <div class="col-left">
+      <h2 class="section">Education</h2>
+      <div class="row-line"><span class="rl-label">UNIVERSITY OF INFORMATION TECHNOLOGY</span><span class="rl-date">2023
+          - Present</span></div>
+      <div class="row-line sub"><span class="rl-label">Bachelor of Computer Network and Data Communication</span><span
+          class="rl-date">Expected Jan 2027</span></div>
+      <div class="entry-meta">Cumulative GPA: 8.77/10</div>
+      <div class="entry-meta">Relevant Courses: Operating Systems, Networks &amp; Systems Administration, Distributed
+        &amp; Cloud Computing Systems, Scripting for Automation, Reinforcement Learning for Networked Systems</div>
+
+      <h2 class="section">SKILLS</h2>
+      <div class="skill-block">
+        <div class="skill-title">Infrastructure &amp; OS:</div>
+        <div class="skill-body">Linux (Ubuntu &ndash; files, permissions, processes, services) &bull; Docker &bull;
+          Kubernetes &bull; Helm &bull; AWS</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">CI/CD &amp; GitOps:</div>
+        <div class="skill-body">Git &amp; Version Control &bull; Jenkins &bull; GitHub Actions &bull; ArgoCD &bull;
+          Argo Rollouts</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Scripting &amp; Automation:</div>
+        <div class="skill-body">Bash &bull; Python &bull; PowerShell &bull; Ansible</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Monitoring &amp; Observability:</div>
+        <div class="skill-body">Prometheus &bull; Grafana &bull; Loki (ELK stack concepts)</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Networking &amp; Security:</div>
+        <div class="skill-body">TCP/IP &bull; DNS &bull; Ports &amp; Connectivity Checks &bull; SonarQube &bull;
+          Trivy</div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-title">Soft Skills &amp; Language:</div>
+        <div class="skill-body">Troubleshooting &bull; Documentation &bull; Cross-team Collaboration &bull; English
+          (Fluent &ndash; TOEIC 905)</div>
+      </div>
+    </div>
+
+    <div class="col-right">
+      <h2 class="section">CERTIFICATIONS & AWARDS</h2>
+      <div class="row-line"><span class="rl-label">TOEIC</span><span class="rl-date">2026</span></div>
+      <div style="display: flex; justify-content: space-between; font-size: 8.9pt;">
+        <div>
+          <div><a href="https://drive.google.com/file/d/1uvb5O312Y4x7osGFUyJ33v1XNkinVVDP/view?usp=drive_link"
+              style="color:#1a1a1a;">Listening &amp; Reading: 905</a></div>
+          <div><a href="https://drive.google.com/file/d/1Wiu1uXRnGdC_FawvBf7fndzDFGr0aDNc/view?usp=drive_link"
+              style="color:#1a1a1a;">Speaking &amp; Writing: 330</a></div>
+        </div>
+        <div style="text-align: right;">
+          <div>Valid until July</div>
+          <div>2028</div>
+        </div>
+      </div>
+
+      <div class="row-line" style="margin-top: 6px;"><span class="rl-label">Academic Merit<br>Scholarship</span><span
+          class="rl-date">2025</span></div>
+      <div class="row-line" style="margin-top: 2px;"><span class="rl-label"
+          style="font-weight: normal; font-size: 8.9pt;">4th Semester</span><span class="rl-date"
+          style="font-weight: normal; font-size: 8.9pt;">2025</span></div>
+      <div class="row-line" style="margin-top: 0px;"><span class="rl-label"
+          style="font-weight: normal; font-size: 8.9pt;">5th Semester</span><span class="rl-date"
+          style="font-weight: normal; font-size: 8.9pt;">2025</span></div>
+
+      <h2 class="section">Extracurricular &amp; Additional Experience</h2>
+      <div class="row-line"><span class="rl-label">Freelance English Tutor | Online</span><span class="rl-date">2024
+          &ndash; 2026</span></div>
+      <ul>
+        <li>Mentored diverse learners over two years,<br>developing highly adaptable communication and<br>presentation
+          skills.</li>
+      </ul>
+      <div class="row-line"><span class="rl-label">Content Creator &amp; Media Member<br>| Social Work Team,
+          VNU-UIT</span><span class="rl-date">2023 &ndash; 2026</span></div>
+      <ul>
+        <li>Collaborated in a cross-functional environment to<br>execute community-driven campaigns and
+          team<br>initiatives.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="clear:both;"></div>
+
+  <h2 class="section">HIGHLIGHT PROJECTS</h2>
+
+  <div class="proj-block">
+    <div class="row-line proj-title-row"><span class="rl-label">GitOps and Progressive Delivery CI/CD Pipeline | Tech
+        Lead | <a href="https://github.com/nt114thenttthytlu" style="color:#1a1a1a;"><u>GitHub</u></a></span><span
+        class="rl-date">2026</span></div>
+    <ul>
+      <li>Automated Cloud Infrastructure &amp; CI: Provisioned AWS infrastructure (VPC, EKS, EC2). Built
+        <strong>Jenkins</strong> pipelines to automate DevOps toolchain deployments (SonarQube, Harbor).
+      </li>
+      <li>GitOps-Driven Delivery: Managed state via <strong>ArgoCD</strong> and packaged 12 microservices into
+        <strong>Helm Charts</strong> for reliable and automated container deployments.
+      </li>
+      <li>System Reliability: Enforced <strong>Kyverno</strong> policies, set up HPA, and integrated
+        <strong>SonarQube</strong> for automated testing and vulnerability scanning.
+      </li>
+    </ul>
+  </div>
+
+  <div class="proj-block">
+    <div class="row-line proj-title-row"><span class="rl-label">Microsoft SQL Server Security Scanner | Tech Lead | <a
+          href="https://github.com/thuanthentran/nt542-db_scanner-gr06"
+          style="color:#1a1a1a;"><u>GitHub</u></a></span><span class="rl-date">2026</span></div>
+    <ul>
+      <li>Engineered a <strong>Python</strong> scanner targeting critical security domains to automate vulnerability
+        detection.</li>
+      <li>Orchestrated <strong>Ansible</strong> playbooks to apply security patches automatically, generating fallback
+        scripts for safe rollbacks.</li>
+      <li>Collected diagnostics and streamlined reporting by automating <strong>consolidated audit reports</strong>
+        (HTML, JSON, CSV).</li>
+    </ul>
+  </div>
+
+  <div class="proj-block">
+    <div class="row-line proj-title-row"><span class="rl-label">Reinforcement Learning Agent for Canary Release | <a
+          href="https://github.com/thuanthentran/dqn-lstm-agent-driven-canary-release"
+          style="color:#1a1a1a;"><u>GitHub</u></a></span><span class="rl-date">2026</span></div>
+    <div class="proj-sub">Personal Project | Personal Graduation Thesis</div>
+    <ul>
+      <li>Conceived, trained, and deployed a custom <strong>Transformer-PPO</strong> Reinforcement Learning agent that
+        autonomously drives canary release decisions (Promote/Rollback/Wait), eliminating manual deployment
+        verification.</li>
+      <li>Designed a continuous deployment pipeline for <strong>10+ polyglot microservices</strong> using
+        <strong>Kubernetes, Argo Rollouts</strong> and Cilium Gateway API for traffic routing.
+      </li>
+      <li>Integrated Service Mesh (<strong>Istio, Linkerd</strong>) to auto-instrument telemetry with zero code
+        changes, capturing <strong>Prometheus/Grafana RED metrics</strong> across both HTTP and internal gRPC
+        endpoints.</li>
+      <li>Engineered complex Hybrid PromQL queries to process heterogeneous traffic data, reducing false-positive
+        rollbacks and troubleshooting routing misconfigurations.</li>
+    </ul>
+  </div>
+
+  <div class="proj-block">
+    <div class="row-line proj-title-row"><span class="rl-label">Standard CI/CD Pipeline for Cookmate/KitchenWhiz web
+        application | Team Member | <a href="https://github.com/TrThuyTien/NT548-Project"
+          style="color:#1a1a1a;"><u>GitHub</u></a></span><span class="rl-date">2025</span></div>
+    <ul>
+      <li>Integrated <strong>SonarQube</strong> into the CI pipeline for automated code quality analysis.</li>
+      <li>Maintained <strong>project documentation</strong> and CI workflow guides in Markdown.</li>
+    </ul>
+  </div>
+
+  <h2 class="section">Additional Software Projects</h2>
+  <div class="row-line additional-row"><span class="rl-label">TCP/UDP Socket Chat Application | C# &bull; .NET &bull;
+      WinForm Application | Tech Lead | <a href="https://github.com/thuanthentran/ChatAppNT106"
+        style="color:#1a1a1a;"><u>GitHub</u></a></span><span class="rl-date">2024</span></div>
+  <div class="row-line additional-row"><span class="rl-label">Android English Learning Assistant Application | Kotlin
+      &bull; Jetpack Compose &bull; Microsoft Foundry | Team Member | <a
+        href="https://github.com/thuanthentran/EnglishLearningAssistant"
+        style="color:#1a1a1a;"><u>GitHub</u></a></span><span class="rl-date">2025</span></div>
+  <div class="row-line additional-row"><span class="rl-label">Clinic Management Web Application | Frontend Lead | <a
+        href="https://github.com/SE104-Group02-ManagingClinic" style="color:#1a1a1a;"><u>GitHub</u></a></span><span
+      class="rl-date">2025</span></div>
+
+</body>
+
+</html>
